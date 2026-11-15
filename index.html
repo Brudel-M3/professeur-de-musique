@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professeur de musique</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">♪</span>
+          <div>
+            <p class="eyebrow">Pédagogie</p>
+            <h1>Professeur de solfège</h1>
+          </div>
+        </div>
+
+        <div class="sidebar-panel">
+          <p class="panel-title">Filtres</p>
+          <div class="category-filters" id="category-filters" aria-label="Filtres de matière"></div>
+        </div>
+
+        <div class="sidebar-panel">
+          <p class="panel-title">Leçons</p>
+          <nav class="lesson-list" id="lesson-list" aria-label="Liste des leçons"></nav>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Leçon active</p>
+            <h2 id="lesson-title">Chargement…</h2>
+          </div>
+          <div class="meta-badges">
+            <span class="badge" id="lesson-category">Théorie</span>
+            <span class="badge accent" id="progress-badge">0 points</span>
+          </div>
+        </header>
+
+        <section class="stats-row" aria-label="Progression de l’élève">
+          <div class="stat-card">
+            <span class="stat-label">Niveau</span>
+            <strong id="stat-level">Débutant</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Score</span>
+            <strong id="stat-score">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Réussites</span>
+            <strong id="stat-successes">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Progression</span>
+            <strong id="stat-progress">0%</strong>
+          </div>
+        </section>
+
+        <section class="card lesson-card">
+          <div class="lesson-meta">
+            <span class="chip" id="lesson-chapter">Fondamentaux</span>
+            <span class="chip alt" id="lesson-difficulty">Débutant</span>
+          </div>
+          <p class="objective" id="lesson-objective"></p>
+          <div class="prompt-box">
+            <p class="prompt-label">Question</p>
+            <h3 id="lesson-prompt"></h3>
+          </div>
+
+          <div id="answer-options" class="answer-options" aria-live="polite"></div>
+
+          <div class="feedback-box" id="feedback-box" aria-live="polite">
+            Sélectionnez une réponse pour commencer.
+          </div>
+
+          <div id="lesson-explanation" class="lesson-explanation"></div>
+          <figure id="lesson-example" class="lesson-example" hidden>
+            <figcaption>
+              <span class="example-label">Exemple illustré</span>
+              <strong id="lesson-example-title"></strong>
+              <span id="lesson-example-caption" class="example-caption"></span>
+            </figcaption>
+            <svg id="lesson-example-svg" class="lesson-example-svg" role="img"></svg>
+          </figure>
+
+          <div class="actions">
+            <button id="reset-progress" class="ghost">Réinitialiser</button>
+            <button id="play-note" class="secondary">Écouter le son</button>
+            <button id="next-lesson" class="primary">Leçon suivante</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="course.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

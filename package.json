@@ -1,0 +1,11 @@
+{
+  "name": "professeur-musique",
+  "version": "1.0.0",
+  "description": "Application pédagogique de musique pour apprendre les notes, intervalles et tonalités.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/server.test.js"
+  },
+  "license": "MIT"
+}
